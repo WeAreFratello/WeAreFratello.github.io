@@ -1,0 +1,205 @@
+<title>WeAreFratello Apps</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&family=Public+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ground: #f5f7f3;
+    --surface: #ffffff;
+    --ink: #1a1f1b;
+    --ink-muted: #565f59;
+    --accent: #006a63;
+    --accent-soft: #dcefec;
+    --rule: #d9e0da;
+    --font-display: "Source Serif 4", Georgia, "Times New Roman", serif;
+    --font-body: "Public Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --font-mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ground: #14170f;
+      --surface: #1a1e19;
+      --ink: #eceee8;
+      --ink-muted: #a3aca4;
+      --accent: #81d5cb;
+      --accent-soft: #16302d;
+      --rule: #2a2f28;
+    }
+  }
+  :root[data-theme="dark"] {
+    --ground: #14170f;
+    --surface: #1a1e19;
+    --ink: #eceee8;
+    --ink-muted: #a3aca4;
+    --accent: #81d5cb;
+    --accent-soft: #16302d;
+    --rule: #2a2f28;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    background: var(--ground);
+    color: var(--ink);
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.6;
+    padding: 0 20px;
+  }
+
+  .page {
+    max-width: 680px;
+    margin: 0 auto;
+    padding-block: 56px 80px;
+  }
+
+  .masthead {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid var(--rule);
+  }
+
+  .masthead__label {
+    font-family: var(--font-mono);
+    font-weight: 600;
+    font-size: 12.5px;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+
+  .masthead__date {
+    font-family: var(--font-mono);
+    font-size: 12.5px;
+    letter-spacing: 0.04em;
+    color: var(--ink-muted);
+    font-variant-numeric: tabular-nums;
+  }
+
+  h1 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: clamp(28px, 5.5vw, 38px);
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    margin: 0 0 8px;
+    text-wrap: balance;
+  }
+
+  .dek {
+    font-size: 16px;
+    color: var(--ink-muted);
+    max-width: 46ch;
+    margin: 0 0 36px;
+  }
+
+  .notice {
+    background: var(--accent-soft);
+    border-left: 3px solid var(--accent);
+    padding: 14px 18px;
+    border-radius: 3px;
+    font-size: 14.5px;
+    color: var(--ink);
+    margin-bottom: 44px;
+  }
+  .notice strong { color: var(--accent); }
+
+  section {
+    display: flex;
+    gap: 20px;
+    padding-block: 26px;
+    border-top: 1px solid var(--rule);
+  }
+  section:first-of-type { border-top: none; padding-top: 0; }
+
+  .section__num {
+    flex: none;
+    width: 30px;
+    padding-top: 3px;
+    font-family: var(--font-mono);
+    font-size: 13px;
+    color: var(--ink-muted);
+    font-variant-numeric: tabular-nums;
+  }
+
+  .section__body { min-width: 0; flex: 1; }
+
+  h2 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: -0.005em;
+    margin: 0 0 10px;
+    text-wrap: balance;
+  }
+
+  p { margin: 0 0 12px; max-width: 62ch; }
+  p:last-child { margin-bottom: 0; }
+
+  ul {
+    margin: 0 0 12px;
+    padding-left: 20px;
+    max-width: 62ch;
+  }
+  li { margin-bottom: 6px; }
+  li:last-child { margin-bottom: 0; }
+
+  code {
+    font-family: var(--font-mono);
+    font-size: 0.92em;
+    background: var(--accent-soft);
+    padding: 0.1em 0.4em;
+    border-radius: 3px;
+  }
+
+  a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  footer {
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid var(--rule);
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+    flex-wrap: wrap;
+    font-family: var(--font-mono);
+    font-size: 12.5px;
+    color: var(--ink-muted);
+    letter-spacing: 0.02em;
+  }
+
+  @media (max-width: 480px) {
+    section { gap: 12px; }
+    .section__num { width: 22px; }
+  }
+</style>
+
+<div class="page">
+
+  <div class="masthead">
+    <span class="masthead__label">WeAreFratello</span>
+  </div>
+
+  <h1>Privacy policies</h1>
+  <p class="dek">Privacy policies for WeAreFratello's Android apps.</p>
+
+  <section>
+    <span class="section__num">01</span>
+    <div class="section__body">
+      <h2><a href="symptomtracker/privacy-policy.html">Symptom Tracker</a></h2>
+      <p>An offline log of symptoms, food, medication and bowel movements. Your data stays on your phone.</p>
+    </div>
+  </section>
+
+  <footer>
+    <span>Contact: <a href="mailto:wearefratelloapps@pm.me">wearefratelloapps@pm.me</a></span>
+  </footer>
+</div>
