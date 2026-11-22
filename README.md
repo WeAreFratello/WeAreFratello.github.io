@@ -7,6 +7,7 @@ lives here.
 
 - `symptomtracker/privacy-policy.html`: Symptom Tracker privacy policy
 - `fplvidiprinter/privacy-policy.html`: FPL Vidiprinter privacy policy
+- `serviceupdates/privacy-policy.html`: Service Updates privacy policy
 
 Pages publish automatically when `main` is pushed. Keep each policy's
 "Effective" date current when its content changes.
